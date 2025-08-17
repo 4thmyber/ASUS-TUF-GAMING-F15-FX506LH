@@ -49,10 +49,3 @@ Below are the BIOS settings and configuration screenshots for reference:
 
 - This documentation may be useful for Hackintosh, Linux, or custom OS installation.  
 - Feel free to contribute or open issues if you have the same model and want to share tips.  
-
----
-
-## 📚 License
-
-This repository is maintained for educational and documentation purposes.  
-See [LICENSE](./LICENSE) for more information.  
