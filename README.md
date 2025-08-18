@@ -44,6 +44,15 @@ Below are the BIOS settings and configuration screenshots for reference:
 ![BIOS Configuration](./BIOS_Configuration/BIOS_Configuration_17.jpg)
 
 ---
+## ⚙️ Installation Process
+
+📸 Below are the screenshots from the installation process:  
+
+![Installation Step 1](./Install/Process.jpg)  
+![Installation Step 2](./Install/Process_1.jpg)  
+![Installation Step 3](./Install/Process_2.jpg)  
+
+---
 
 ## 📌 Notes
 
