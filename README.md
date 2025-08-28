@@ -9,7 +9,7 @@ It includes hardware specifications, BIOS configuration, and other related notes
 
 - **Processor**: Intel® Core™ i7-10750H (Comet Lake)  
 - **Integrated GPU**: Intel® UHD Graphics  
-- **Dedicated GPU**: NVIDIA GeForce GTX 1650  
+- **external GPU**: NVIDIA GeForce GTX 1650  
 - **Storage**: Micron 512GB NVME M.2 2210 SSD MTFDHBA512QFD
 - **Storage**: Kingston 512GB NVME M.2 2280 SSD OM8PCP3512F-AB
 - **Memory**: 64GB DDR4 3200MHz  
