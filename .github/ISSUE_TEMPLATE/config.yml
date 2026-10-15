@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Dortania OpenCore troubleshooting
+    url: https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/troubleshooting.html
+    about: General OpenCore problems not specific to this laptop

@@ -13,14 +13,17 @@ No EFI changes.
   (`.opencore-version`), checks the OpenCore binaries against the official release, and checks that every
   referenced ACPI/kext/driver file exists and Lilu loads first. Runs in GitHub Actions on every push and PR.
 - `docs/runbook.md` (install, boot-test checklist, recovery) and `docs/roadmap.md` (planned improvements, references).
+- `CONTRIBUTING.md` (commit format, OpenCore upgrade procedure, release rules), `LICENSE` (MIT, own content only),
+  bug report issue template.
 
 ### Changed
 - README rewritten: hardware support table, status, full kext/SSDT list with versions and sources, usage steps.
 - Renamed `Install/Prosess_0.jpg` → `Install/Process_0.jpg`; stopped tracking `.DS_Store` files.
 
-## [2025-08-28] — macOS 26 Tahoe
+## [v2025.08.28] — macOS 26 Tahoe
 
-**OpenCore 1.0.5** · SMBIOS `MacBookPro16,1` · tested on macOS 26 Tahoe
+**OpenCore 1.0.5** · SMBIOS `MacBookPro16,1` · tested on macOS 26 Tahoe (build not recorded) ·
+[download](https://github.com/4thmyber/ASUS-TUF-GAMING-F15-FX506LH/releases/tag/v2025.08.28)
 
 ### Added
 - AMFIPass 1.4.1, loaded only on macOS 26 (`MinKernel` 25.0.0) — fixes audio on Tahoe.

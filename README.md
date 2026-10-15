@@ -81,7 +81,8 @@ OpenCore EFI, BIOS settings and install notes for running **macOS 26 Tahoe** on 
 1. Configure the BIOS as shown in the **BIOS Configuration** screenshots below.
 2. **Generate your own SMBIOS** (`MacBookPro16,1`) with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) and put
    the serial, MLB, SystemUUID and ROM into `EFI/OC/Config.plist` → `PlatformInfo/Generic`. Do not reuse the values in this repo.
-3. Copy `EFI/` to a FAT32 USB stick, boot it with **F8**, install macOS.
+3. Download `EFI-<version>.zip` from [Releases](https://github.com/4thmyber/ASUS-TUF-GAMING-F15-FX506LH/releases)
+   (tested versions; `main` may contain untested changes), copy `EFI/` to a FAT32 USB stick, boot it with **F8**, install macOS.
 4. After a successful boot, copy `EFI/` to the internal EFI partition — see the [runbook](./docs/runbook.md).
 
 Validate changes before booting: `./scripts/check.sh` (runs `ocvalidate` for the pinned OpenCore version and EFI
@@ -124,8 +125,12 @@ consistency checks; also runs in CI).
 
 - Changes per version: [CHANGELOG.md](./CHANGELOG.md) · Troubleshooting & recovery: [docs/runbook.md](./docs/runbook.md) ·
   Planned improvements & references: [docs/roadmap.md](./docs/roadmap.md)
-- Issues and tips from owners of the same model are welcome — please include your BIOS version, macOS build and
-  OpenCore version, and redact serial numbers from logs and screenshots.
+- Issues and tips from owners of the same model are welcome — use the bug report template and redact serial numbers.
+  Contributions: see [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+## 📄 License
+
+MIT for the configuration, scripts and documentation. OpenCore, drivers and kexts keep their own licenses — see [LICENSE](./LICENSE).
 
 ## 🙏 Credits
 

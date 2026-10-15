@@ -1,0 +1,51 @@
+name: Bug report
+description: Something does not work with this EFI
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please remove your serial number, MLB, SystemUUID and ROM from anything you paste.
+  - type: input
+    id: model
+    attributes:
+      label: Laptop model and BIOS version
+      placeholder: FX506LH, BIOS 314
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and build
+      description: "Run: sw_vers"
+      placeholder: 26.4 (25E246)
+    validations:
+      required: true
+  - type: input
+    id: efi
+    attributes:
+      label: EFI release / commit used
+      placeholder: v2025.08.28
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: Changes you made to the EFI
+      description: Kexts, boot-args, Config.plist keys you changed. "None" if unchanged.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happens and how to reproduce it
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Panic: `log show --last boot --predicate 'eventMessage contains "panic"'`
+        Boot hang: photo of the last verbose lines. Sleep: `pmset -g log | grep -E "Sleep|Wake|Failure" | tail -50`
+      render: text
