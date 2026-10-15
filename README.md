@@ -80,7 +80,7 @@ OpenCore EFI, BIOS settings and install notes for running **macOS 26 Tahoe** on 
 
 ## 🚀 Usage
 
-1. Configure the BIOS as shown in the **BIOS Configuration** screenshots below.
+1. Configure the BIOS with the [BIOS guide](./docs/bios-guide.md).
 2. **Generate your own SMBIOS** (`MacBookPro16,1`) with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) and put
    the serial, MLB, SystemUUID and ROM into `EFI/OC/Config.plist` → `PlatformInfo/Generic`. Do not reuse the values in this repo.
 3. Download `EFI-<version>.zip` from [Releases](https://github.com/4thmyber/ASUS-TUF-GAMING-F15-FX506LH/releases)
@@ -97,24 +97,12 @@ consistency checks; also runs in CI).
 
 ## 🖥️ BIOS Configuration
 
-![BIOS Configuration 0](./BIOS_Configuration/BIOS_Configuration.jpg)
-![BIOS Configuration 1](./BIOS_Configuration/BIOS_Configuration_1.jpg)
-![BIOS Configuration 2](./BIOS_Configuration/BIOS_Configuration_2.jpg)
-![BIOS Configuration 3](./BIOS_Configuration/BIOS_Configuration_3.jpg)
-![BIOS Configuration 4](./BIOS_Configuration/BIOS_Configuration_4.jpg)
-![BIOS Configuration 5](./BIOS_Configuration/BIOS_Configuration_5.jpg)
-![BIOS Configuration 6](./BIOS_Configuration/BIOS_Configuration_6.jpg)
-![BIOS Configuration 7](./BIOS_Configuration/BIOS_Configuration_7.jpg)
-![BIOS Configuration 8](./BIOS_Configuration/BIOS_Configuration_8.jpg)
-![BIOS Configuration 9](./BIOS_Configuration/BIOS_Configuration_9.jpg)
-![BIOS Configuration 10](./BIOS_Configuration/BIOS_Configuration_10.jpg)
-![BIOS Configuration 11](./BIOS_Configuration/BIOS_Configuration_11.jpg)
-![BIOS Configuration 12](./BIOS_Configuration/BIOS_Configuration_12.jpg)
-![BIOS Configuration 13](./BIOS_Configuration/BIOS_Configuration_13.jpg)
-![BIOS Configuration 14](./BIOS_Configuration/BIOS_Configuration_14.jpg)
-![BIOS Configuration 15](./BIOS_Configuration/BIOS_Configuration_15.jpg)
-![BIOS Configuration 16](./BIOS_Configuration/BIOS_Configuration_16.jpg)
-![BIOS Configuration 17](./BIOS_Configuration/BIOS_Configuration_17.jpg)
+**Full guide with screenshots, BIOS update steps and troubleshooting: [docs/bios-guide.md](./docs/bios-guide.md)**
+(tested on BIOS 310; recommendations are updated there).
+
+Summary — **Disabled:** Fast Boot, Secure Boot, VT-d, Network Stack ·
+**Enabled:** Internal Pointing Device, Hyper-Threading, VT-x, USB Mass Storage Driver Support ·
+**DVMT Pre-Allocated:** 64M · **SATA:** AHCI (no RST/VMD) · **I/O Interface Security:** all Unlock.
 
 ---
 
@@ -128,7 +116,7 @@ consistency checks; also runs in CI).
 
 ## 📌 Notes
 
-- Changes per version: [CHANGELOG.md](./CHANGELOG.md) · Troubleshooting & recovery: [docs/runbook.md](./docs/runbook.md) ·
+- BIOS settings: [docs/bios-guide.md](./docs/bios-guide.md) · Changes per version: [CHANGELOG.md](./CHANGELOG.md) · Troubleshooting & recovery: [docs/runbook.md](./docs/runbook.md) ·
   Planned improvements & references: [docs/roadmap.md](./docs/roadmap.md)
 - Issues and tips from owners of the same model are welcome — use the bug report template and redact serial numbers.
   Contributions: see [CONTRIBUTING.md](./CONTRIBUTING.md).

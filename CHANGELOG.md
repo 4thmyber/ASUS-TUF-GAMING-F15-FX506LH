@@ -6,6 +6,10 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Added
+- `docs/bios-guide.md`: BIOS settings with reasons, step-by-step screenshots, boot order, BIOS update and
+  troubleshooting. New recommendation: enable VT-x.
+
 ## [v2.0.2] — 2026-10-15 — cleanup & documentation
 
 **OpenCore 1.0.5** · same EFI as v2.0.1 (no config or kext changes) · [release](https://github.com/4thmyber/ASUS-TUF-GAMING-F15-FX506LH/releases/tag/v2.0.2)

@@ -27,7 +27,7 @@ Run after every EFI change, booted from USB first. Always do the first three.
 ## Won't boot — first moves
 | Symptom | Try |
 |---|---|
-| No OpenCore picker | BIOS: Secure Boot off, CSM off, boot order; see `BIOS_Configuration/` |
+| No OpenCore picker | BIOS settings and boot order — see the [BIOS guide](./bios-guide.md) |
 | Picker shows, macOS hangs | Boot verbose (already `-v`), photo the last lines and open an issue with it |
 | Hang after an update | Picker → *Reset NVRAM*, then boot the known-good USB EFI |
 | Panic loop | Picker → Space → macOS Recovery; or USB EFI with the last-good tag |
