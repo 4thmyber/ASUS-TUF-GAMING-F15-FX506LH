@@ -37,5 +37,6 @@ Binaries and config always move together, in one commit:
 Use ProperTree, OCAT or Python `plistlib`. Avoid editors that reorder or drop keys.
 
 ## Releases
-After a change passes the boot test, it is tagged `vYYYY.MM.DD` and published as a GitHub release with
+After a change passes the boot test, it is tagged `vMAJOR.MINOR.PATCH` — MAJOR: new macOS target or EFI rebuild,
+MINOR: new working feature, PATCH: fix — and published as a GitHub release with
 `EFI-<tag>.zip`. Each CHANGELOG entry lists the OpenCore version, kext versions and the **macOS build tested**.

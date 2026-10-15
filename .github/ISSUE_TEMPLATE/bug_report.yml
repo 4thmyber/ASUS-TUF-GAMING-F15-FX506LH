@@ -25,7 +25,7 @@ body:
     id: efi
     attributes:
       label: EFI release / commit used
-      placeholder: v2025.08.28
+      placeholder: v2.0.2
     validations:
       required: true
   - type: textarea

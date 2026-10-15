@@ -20,7 +20,7 @@ OpenCore EFI, BIOS settings and install notes for running **macOS 26 Tahoe** on 
 | Storage | Kingston 512 GB NVMe (OM8PCP3512F-AB) | ✅ NVMeFix |
 | Ethernet | Realtek RTL8111/8168 | ✅ RealtekRTL8111 |
 | Wi-Fi / Bluetooth | Intel Wi-Fi 6 AX201 | ✅ Wi-Fi (itlwm + HeliPort) · ❌ Bluetooth not configured |
-| Audio | Realtek ALC256 | ✅ AppleALC, `layout-id` 33 |
+| Audio | Realtek ALC256 | ✅ AppleALC, `layout-id` 33 (Tahoe: + OCLP-Mod root patch) |
 | Trackpad | I2C HID | ✅ VoodooI2C |
 | Keyboard | PS/2 | ✅ VoodooPS2, brightness keys via BrightnessKeys |
 
@@ -33,6 +33,8 @@ OpenCore EFI, BIOS settings and install notes for running **macOS 26 Tahoe** on 
 | macOS | 26 Tahoe |
 | OpenCore | **1.0.5** (RELEASE) |
 | SMBIOS | `MacBookPro16,1` |
+| SIP / SecureBootModel | `0x803` / `Disabled` (required for the audio root patch) |
+| Latest release | [v2.0.2](https://github.com/4thmyber/ASUS-TUF-GAMING-F15-FX506LH/releases/tag/v2.0.2) |
 | Working | Graphics acceleration & brightness, audio, Wi-Fi, Ethernet, trackpad, keyboard & brightness keys, battery status, NVMe |
 | Not working | NVIDIA dGPU (unsupported by macOS), Bluetooth (not configured) |
 | Not yet verified | Sleep/wake, all USB ports (no USB map yet — see [roadmap](./docs/roadmap.md)) |
@@ -61,7 +63,7 @@ OpenCore EFI, BIOS settings and install notes for running **macOS 26 Tahoe** on 
 | VoodooI2CHID | 1.0 (from VoodooI2C 2.9.1) | I2C HID satellite | [VoodooI2C/VoodooI2C](https://github.com/VoodooI2C/VoodooI2C) |
 | itlwm | 2.3.0 | Intel Wi-Fi (use with [HeliPort](https://github.com/OpenIntelWireless/HeliPort)) | [OpenIntelWireless/itlwm](https://github.com/OpenIntelWireless/itlwm) |
 | RealtekRTL8111 | 2.5.0 | Ethernet | [Mieze/RTL8111_driver_for_OS_X](https://github.com/Mieze/RTL8111_driver_for_OS_X) |
-| AMFIPass | 1.4.1 | Allows loading kexts with AMFI enabled; loaded on macOS 26 only | [dortania/OpenCore-Legacy-Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) |
+| AMFIPass | 1.4.1 | Lets the root-patched AppleHDA load with AMFI enabled; macOS 26 only | [dortania/OpenCore-Legacy-Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) |
 
 ### ACPI
 
@@ -84,6 +86,9 @@ OpenCore EFI, BIOS settings and install notes for running **macOS 26 Tahoe** on 
 3. Download `EFI-<version>.zip` from [Releases](https://github.com/4thmyber/ASUS-TUF-GAMING-F15-FX506LH/releases)
    (tested versions; `main` may contain untested changes), copy `EFI/` to a FAT32 USB stick, boot it with **F8**, install macOS.
 4. After a successful boot, copy `EFI/` to the internal EFI partition — see the [runbook](./docs/runbook.md).
+5. Wi-Fi: install [HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases).
+   Audio on Tahoe: run the [OCLP-Mod](https://github.com/laobamac/OCLP-Mod/releases) **Post-Install Root Patch**
+   (steps in the [v2.0.2 release notes](https://github.com/4thmyber/ASUS-TUF-GAMING-F15-FX506LH/releases/tag/v2.0.2)); repeat after each macOS update.
 
 Validate changes before booting: `./scripts/check.sh` (runs `ocvalidate` for the pinned OpenCore version and EFI
 consistency checks; also runs in CI).

@@ -18,7 +18,6 @@ Priority: P2 important · P3 should do · P4 nice to have.
 | 9 | P4 | Verbose/debug boot-args `-v debug=0x100 keepsyms=1` | Remove `-v` once stable |
 | 10 | P4 | Battery: SMCBatteryManager only | Check whether ASUS EC needs a battery SSDT; verify percentage updates |
 | 11 | P4 | VoodooPS2Mouse and VoodooPS2Trackpad loaded although the trackpad is I2C | Disable both if keyboard and I2C trackpad still work (avoids input conflicts) |
-| 12 | P4 | No tagged releases | Tag + attach `EFI-<tag>.zip` after each boot-tested change |
 
 ## Practices used in this repo
 - **One pinned OpenCore version** (`.opencore-version`); CI runs that version's `ocvalidate` and checks the

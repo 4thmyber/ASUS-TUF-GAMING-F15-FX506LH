@@ -6,7 +6,9 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
-No EFI changes.
+## [v2.0.2] — 2026-10-15 — cleanup & documentation
+
+**OpenCore 1.0.5** · same EFI as v2.0.1 (no config or kext changes) · [release](https://github.com/4thmyber/ASUS-TUF-GAMING-F15-FX506LH/releases/tag/v2.0.2)
 
 ### Added
 - `scripts/check.sh`: validates `Config.plist` with `ocvalidate` for the pinned OpenCore version
@@ -18,15 +20,17 @@ No EFI changes.
 
 ### Changed
 - README rewritten: hardware support table, status, full kext/SSDT list with versions and sources, usage steps.
+- Release zip built from the repository: no unused OpenCanopy `Resources/`, no `.DS_Store`/`__MACOSX`.
 - Renamed `Install/Prosess_0.jpg` → `Install/Process_0.jpg`; stopped tracking `.DS_Store` files.
 
-## [v2025.08.28] — macOS 26 Tahoe
+## [v2.0.1] — 2025-08-28 — audio on macOS 26 Tahoe
 
-**OpenCore 1.0.5** · SMBIOS `MacBookPro16,1` · tested on macOS 26 Tahoe (build not recorded) ·
-[download](https://github.com/4thmyber/ASUS-TUF-GAMING-F15-FX506LH/releases/tag/v2025.08.28)
+**OpenCore 1.0.5** · SMBIOS `MacBookPro16,1` · tested on macOS 26 Tahoe (build not recorded) · [release](https://github.com/4thmyber/ASUS-TUF-GAMING-F15-FX506LH/releases/tag/v2.0.1)
 
 ### Added
-- AMFIPass 1.4.1, loaded only on macOS 26 (`MinKernel` 25.0.0) — fixes audio on Tahoe.
+- AMFIPass 1.4.1, loaded only on macOS 26 (`MinKernel` 25.0.0). Together with the OCLP-Mod root patch
+  (restores AppleHDA, removed in Tahoe) this brings audio back on Tahoe. The root patch must be re-applied after
+  every macOS update.
 
 ### Kexts in this release
 | Kext | Version |
@@ -47,9 +51,9 @@ No EFI changes.
 Drivers: OpenRuntime (OpenCore 1.0.5), OpenHfsPlus.
 ACPI: SSDT-PLUG, SSDT-EC-USBX, SSDT-AWAC-DISABLE, SSDT-PMC, SSDT-PNLF, SSDT-XOSI.
 
-## [2025-08-27]
+## [v2.0.0] — 2025-08-27
 
-**OpenCore 1.0.5**
+**OpenCore 1.0.5** · [release](https://github.com/4thmyber/ASUS-TUF-GAMING-F15-FX506LH/releases/tag/v2.0.0)
 
 ### Added
 - Audio: AppleALC `layout-id` 33 for ALC256.
@@ -58,9 +62,9 @@ ACPI: SSDT-PLUG, SSDT-EC-USBX, SSDT-AWAC-DISABLE, SSDT-PMC, SSDT-PNLF, SSDT-XOSI
 - Brightness keys: BrightnessKeys 1.0.3. Battery status: SMCBatteryManager 1.3.7.
 - Boot-args: `-wegnoegpu` (disable NVIDIA dGPU), `-v debug=0x100 keepsyms=1`.
 
-## [2025-08-26] — Minimal working EFI
+## [v1.0.0] — 2025-08-26 — minimal working EFI
 
-**OpenCore 1.0.5**
+**OpenCore 1.0.5** · [release](https://github.com/4thmyber/ASUS-TUF-GAMING-F15-FX506LH/releases/tag/v1.0.0)
 
 ### Changed
 - Rebuilt the EFI from a minimal base: custom SSDTs (PLUG, EC-USBX, AWAC-DISABLE, PMC, PNLF) instead of a full `DSDT.aml`.
@@ -72,7 +76,7 @@ ACPI: SSDT-PLUG, SSDT-EC-USBX, SSDT-AWAC-DISABLE, SSDT-PMC, SSDT-PNLF, SSDT-XOSI
   IntelBluetoothFirmware, NoTouchID, RestrictEvents, SMCLightSensor, SMCProcessor, SMCSuperIO,
   USBToolBox, UTBMap, XHCI-unsupported; VoodooI2C, VoodooI2CHID and SMCBatteryManager (re-added 2025-08-27).
 
-## [2025-08-17 – 2025-08-18] — Initial setup
+## 2025-08-17 – 2025-08-18 — initial setup (no release)
 
 **OpenCore 1.0.5**
 - BIOS configuration screenshots, installation screenshots, hardware list.
